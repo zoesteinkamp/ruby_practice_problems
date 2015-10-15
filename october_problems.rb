@@ -6,3 +6,21 @@
 # This might be cheating, but i have a trick up my sleeve for this one.
 array = [1,2,3,4]
 arr_max = array.minmax  # returns [1,4]
+
+
+
+#Using the Ruby language, have the function PrimeMover(num) return the numth prime number.
+#The range will be from 1 to 10^4. For example: if num is 16 the output should be 53 as 53 is the 16th prime number.
+
+# so theres the proper way to do this, which ill show, its kind of a shortcut
+require 'prime'
+
+
+
+def PrimeFinder(num)
+    array = Prime.take(10000)
+  index = num -1
+  puts array[index]
+end
+
+PrimeFinder(100)
