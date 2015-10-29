@@ -42,3 +42,28 @@ def StringScramble(str1,str2)
 end
 
 StringScramble("sorted", "desort")
+
+#Using the Ruby language, have the function LetterCount(str) take the str parameter being passed and return the first word
+#with the greatest number of repeated letters. For example: "Today, is the greatest day ever!" should return greatest because
+#it has 2 e's (and 2 t's) and it comes before ever which also has 2 e's. If there are no words with repeating letters return
+#-1. Words will be separated by spaces.
+
+def LetterCount(str)
+    values = str.split()
+    g = 0
+    values.each do |value|
+        g = ("a".."z").all?{|c| value.count(c) <= 1}
+
+         if g == false
+        return false
+        else
+            return true
+    end
+    end
+
+
+end
+
+# LetterCount("No double")
+# LetterCount("DDouble")
+LetterCount("the fun of making doubles in rubyy")
